@@ -1,0 +1,36 @@
+<ion-view id="page3" class="app-background"  hide-back-button="true">
+	<ion-nav-buttons side="right">
+	<button class="button button-assertive" ng-click="signupbasic.next()">
+		Next
+	</button>
+	<!--<a href="#/signup2" id="signUp1-button5" class="button button-assertive ">Next</a>-->
+	</ion-nav-buttons>      
+    <ion-content padding="false" class="" scroll="false">
+		<div class="simple-padding">
+        <h3 class="light-text-center">Set your details</h3>
+		<div class="h_line"></div>		
+        <div class="light-text-center">
+            <p>To get started, we need a bit of information about you which we'll use to notify you of new leads</p>
+        </div>
+		</div>
+		<div class="signup-form-first">
+        <form name="signupbasic.firstForm" novalidate="" class="list">
+            <label class="item item-input" ng-class="{ 'has-errors' : signupbasic.firstForm.firstname.$invalid, 'no-errors' : signupbasic.firstForm.firstname.$valid}">
+                <input type="text" name="firstname" placeholder="First Name" ng-model="signupbasic.formDetails.firstname" ng-minlength="5" ng-maxlength="20" required>
+            </label>
+			<div class="error-container" ng-show="signupbasic.firstForm.firstname.$dirty && signupbasic.firstForm.firstname.$error" ng-messages="signupbasic.firstForm.firstname.$error">
+              <div ng-messages-include="templates/error-list-basic.html"></div>
+            </div>
+            <label class="item item-input" ng-class="{ 'has-errors' : signupbasic.firstForm.lastname.$invalid, 'no-errors' : signupbasic.firstForm.lastname.$valid}">
+                <input type="text" name="lastname" placeholder="Last Name" ng-model="signupbasic.formDetails.lastname" ng-minlength="5" ng-maxlength="20" required>
+            </label>
+			<div class="error-container" ng-show="signupbasic.firstForm.lastname.$dirty && signupbasic.firstForm.lastname.$error" ng-messages="signupbasic.firstForm.lastname.$error">
+              <div ng-messages-include="templates/error-list-basic.html"></div>
+            </div>
+        </form>
+        <div class="dark-text simple-padding">
+            <p>Your name will be displayed in the text response to your new leads</p>
+        </div>
+		</div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view id="page4" class="app-background">
+<ion-nav-buttons side="right">
+	<button class="button button-assertive" ng-click="signupdetail.submit()">
+		Next
+	</button>
+	<!--<a href="#/register/userconfirmation" id="signUp1-button5" class="button button-assertive ">Next</a>-->
+	</ion-nav-buttons>    
+    <ion-content padding="false" class="" scroll="false">
+		<div class="signup-form-second">
+        <div class="dark-text simple-padding">
+            <p>Very important. We alert you of new leads via text message and email so use your primary mobile and email
+                <strong>EX: 8011231234</strong>
+            </p>
+        </div>
+        <form name="signupdetail.secondForm" novalidate=""  class="list">
+            <label class="item item-input" ng-class="{ 'has-errors' : signupdetail.secondForm.mobileno.$invalid, 'no-errors' : signupdetail.secondForm.mobileno.$valid}">
+                <input type="tel" name="mobileno" placeholder="Mobile Phone" ng-model="signupdetail.formDetails.mobileno" ng-minlength="10" ng-maxlength="10" required>
+            </label>			
+			<div class="error-container" ng-show="signupdetail.secondForm.mobileno.$dirty && signupdetail.secondForm.mobileno.$error" ng-messages="signupdetail.secondForm.mobileno.$error">
+              <div ng-messages-include="templates/error-list-detail.html"></div>
+            </div>	
+            <label class="item item-input" ng-class="{ 'has-errors' : signupdetail.secondForm.emailaddress.$invalid, 'no-errors' : signupdetail.secondForm.emailaddress.$valid}">
+                <input type="email" name="emailaddress" placeholder="Email Address" ng-model="signupdetail.formDetails.emailaddress" required>
+            </label>
+			<div class="error-container" ng-show="signupdetail.secondForm.emailaddress.$dirty && signupdetail.secondForm.emailaddress.$error" ng-messages="signupdetail.secondForm.emailaddress.$error">
+              <div ng-messages-include="templates/error-list-detail.html"></div>
+            </div>	
+			<div class="dark-text simple-padding">
+				<p>Enter the state you do business in</p>
+			</div>
+            <label class="item item-input">
+                <input type="text" placeholder="Brokerage/Agency Name">
+            </label>
+            <label class="item item-select" name="State">
+                <span class="input-label">State</span>
+                <select>
+				<option value=""></option>
+				<option value="wb">West Bengal</option>
+				<option value="m">Maharashtra</option>
+				</select>
+            </label>		
+        </form>
+		</div>
+    </ion-content>
+</ion-view>

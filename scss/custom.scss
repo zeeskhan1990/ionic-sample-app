@@ -1,0 +1,170 @@
+/*
+
+  This styles are specific to example views, but can be re-used in your projects
+
+*/
+
+.home-title{
+    padding-top:50px !important;
+    font-size:4em;
+    padding:20px;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 300;
+}
+
+.product-price{
+  background-color:rgba(0,0,0,.5) !important; 
+  z-index:1000; position:relative; margin-top:-140px; float:right; margin-right:20px;
+  border:solid white 2px;
+  height:120px;
+  width:120px;
+  border-radius:100%;
+}
+
+.product-price-price {
+  font-size:2em !important; margin-top:8px;
+}
+
+.product-price-text{
+  margin-top:-15px;
+}
+
+.product-price:active{
+  background-color:$positive !important; 
+}
+
+.cart-badge{
+  background: $assertive !important;
+   position:relative !important;z-index:1000; display:inline-block !important; width:24px; height:24px; border:solid white 1px; border-radius:24px; text-align:center; line-height:20px; font-weight:bold; margin-left:-20px !important; top:-4px;
+}
+
+.avatar-account{
+  height:128px;
+  width:128px; 
+  border-radius:100%;
+  border:solid white 4px;
+}
+
+.avatar-menu{
+  border-radius:100%; 
+  border:solid white 2px; 
+  height:120px; 
+  width:120px; 
+  margin:auto;
+}
+
+/************************************************************************************************************************************************************/
+
+.welcome-wrapper {
+	padding: 50px 10px 0px;
+}
+
+.text-center {
+	text-align:center;
+}
+
+.dark-text {
+	color:#000000;
+}
+
+.light-text {
+	color:#FFFFFF;
+}
+
+.dark-text-center {
+	@extend .text-center;
+	@extend .dark-text;
+}
+
+.light-text-center {
+	@extend .text-center;
+	@extend .light-text;
+}
+
+.h_line {
+	width:60%;
+	height:1px;
+	background: #fff;
+	margin: 1em auto;
+}
+
+.app-header {
+	@extend .dark-text-center;
+	font-weight:400;
+}
+
+.simple-padding {
+	padding : 15px;
+}
+
+.welcome-entry-block {
+	margin-top : 150px !important
+}
+
+.app-background {
+	background-color:#226E70;
+}
+
+.signup-intro {
+	@extend .simple-padding;
+}
+
+.signup-form-first {
+	margin-top: 40%;
+	background-color : #FFFFFF;
+	height:100%;
+}
+.signup-form-second {
+	margin-top: 20%;
+	background-color : #FFFFFF;
+	height:100%;
+}
+.user-confirmation-intro{
+	margin-top:50px !important;
+	padding: 0 10px;
+}
+.user-confirmation-save {
+	margin-top : 60%;
+}
+
+.error-container {
+  margin: 0;
+}
+ 
+.error-container:last-child {
+    margin: 5px 0 0;
+}
+ 
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+ 
+.error i {
+  font-size: 24px;
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+ 
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+ 
+.has-errors {
+  border-bottom: 3px solid #B83E2C;
+}
+ 
+.no-errors {
+  border-right: 3px solid green;
+  border-left: 3px solid green;
+}
+.translucent {
+	opacity : 0.5;
+}
+.transparent {
+	background-color:transparent;
+}
