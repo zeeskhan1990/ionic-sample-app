@@ -3,7 +3,14 @@ angular.module('app.controllers', [])
 .controller('welcomeCtrl', function($scope, $state) {
 
 })
-
+/*
+This controller serves as the parent controller to the controllers
+'signUp1Ctrl', 'signUp2Ctrl' and 'userConfirmationCtrl'. This also 
+acts as an intermediate data store for the input field values of
+the two registration screens so that the data is stored in a 
+common parent controller and can be used for loading and storing
+while navigating forward and backward through the screens.
+*/
 .controller('registrationCtrl', function($scope, $state) {
 	var vm = this;
 	vm.formDetails = {
@@ -44,7 +51,10 @@ angular.module('app.controllers', [])
 	}
 	vm.formDetails = $scope.rc.formDetails;
 })
-   
+/*
+On user confirmation the data from the scope of the parent controller
+is being stored in the local storage for being used in the home screen
+*/   
 .controller('userConfirmationCtrl', function($scope, $state) {
 	var vm = this;
 	vm.formDetails = $scope.rc.formDetails;

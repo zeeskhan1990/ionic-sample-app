@@ -13,11 +13,11 @@
 }
 
 .dark-text {
-	color:#000000;
+	color:$dark;
 }
 
 .light-text {
-	color:#FFFFFF;
+	color:$light;
 }
 
 .dark-text-center {
@@ -33,7 +33,7 @@
 .h_line {
 	width:60%;
 	height:1px;
-	background: #fff;
+	background: $light;
 	margin: 1em auto;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .app-background {
-	background-color:#226E70;
+	background-color:$appbg;
 }
 
 .signup-intro {
@@ -60,12 +60,12 @@
 
 .signup-form-first {
 	margin-top: 40%;
-	background-color : #FFFFFF;
+	background-color : $light;
 	height:100%;
 }
 .signup-form-second {
 	margin-top: 20%;
-	background-color : #FFFFFF;
+	background-color : $light;
 	height:100%;
 }
 .user-confirmation-intro{
@@ -94,7 +94,7 @@
  
 .error i {
   font-size: 18px;
-  color: #B83E2C;  
+  color: $apperr;  
   vertical-align: middle;
 }
  
@@ -103,19 +103,17 @@
 }
  
 .has-errors {
-  border-bottom: 2px solid #B83E2C;
+  border-bottom: 2px solid $apperr;
 }
  
 .no-errors {
   border-right: 3px solid green;
   border-left: 3px solid green;
 }
-.translucent {
-	opacity : 0.6;
-}
-.transparent {
+
+.transparent-bg {
 	background-color:transparent;
 }
 .custom-gray {
-	background-color:#B4B7B8;
+	background-color:$lessdarktp;
 }

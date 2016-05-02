@@ -19,13 +19,13 @@
                 <input type="text" name="firstname" placeholder="First Name" ng-model="signupbasic.formDetails.firstname" ng-minlength="5" ng-maxlength="20" required>
             </label>
 			<div class="error-container" ng-show="signupbasic.firstForm.firstname.$dirty && signupbasic.firstForm.firstname.$error" ng-messages="signupbasic.firstForm.firstname.$error">
-              <div ng-messages-include="templates/error-list-basic.html"></div>
+              <div ng-messages-include="templates/error/error-list-basic.html"></div>
             </div>
             <label class="item item-input" ng-class="{ 'has-errors' : signupbasic.firstForm.lastname.$invalid, 'no-errors' : signupbasic.firstForm.lastname.$valid}">
                 <input type="text" name="lastname" placeholder="Last Name" ng-model="signupbasic.formDetails.lastname" ng-minlength="5" ng-maxlength="20" required>
             </label>
 			<div class="error-container" ng-show="signupbasic.firstForm.lastname.$dirty && signupbasic.firstForm.lastname.$error" ng-messages="signupbasic.firstForm.lastname.$error">
-              <div ng-messages-include="templates/error-list-basic.html"></div>
+              <div ng-messages-include="templates/error/error-list-basic.html"></div>
             </div>
         </form>
         <div class="dark-text simple-padding">

@@ -1,17 +1,6 @@
 @charset "UTF-8";
 /*
-
-  DeepBlue Starter Kit
-  version 1.1
-  Copyright (c) 2015 INMAGIK SRL - www.inmagik.com
-  All rights reserved
-
-  written by Mauro Bianchi
-  bianchimro@gmail.com  
-
-  file: ionic.app.scss
-  description: main scss file
-  
+  The main scss file of the project
 */
 /*!
   Ionicons, v2.0.1
@@ -9741,15 +9730,15 @@ a.button {
   text-align: center; }
 
 .dark-text, .dark-text-center, .app-header {
-  color: #000000; }
+  color: #444; }
 
 .light-text, .light-text-center {
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 .h_line {
   width: 60%;
   height: 1px;
-  background: #fff;
+  background: #ffffff;
   margin: 1em auto; }
 
 .app-header {
@@ -9766,12 +9755,12 @@ a.button {
 
 .signup-form-first {
   margin-top: 40%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100%; }
 
 .signup-form-second {
   margin-top: 20%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100%; }
 
 .user-confirmation-intro {
@@ -9809,11 +9798,8 @@ a.button {
   border-right: 3px solid green;
   border-left: 3px solid green; }
 
-.translucent {
-  opacity: 0.6; }
-
-.transparent {
+.transparent-bg {
   background-color: transparent; }
 
 .custom-gray {
-  background-color: #B4B7B8; }
+  background-color: rgba(85, 85, 85, 0.75); }

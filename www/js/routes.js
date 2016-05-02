@@ -9,44 +9,55 @@ angular.module('app.routes', [])
   $stateProvider
     .state('welcome', {
     url: '/index',
-    templateUrl: 'templates/welcome.html',
+    templateUrl: 'templates/index.html',
     controller: 'welcomeCtrl',
 	controllerAs: 'welcome'		
   })
-  
+  /*
+  There are three steps in the registration process, and for each step
+  there is a corresponding controller. There is also a parent abstract
+  controller "registrationCtrl" from which all the three other states
+  inherits.
+  */
   .state('registration', {
 	abstract:true,
 	url:'/register',
-	templateUrl:'templates/register.html',
+	templateUrl:'templates/registration/register.html',
 	controller:'registrationCtrl',
 	controllerAs:'rc'
   })
 
   .state('registration.signUp1', {
     url: '/signup',
-    templateUrl: 'templates/signUp1.html',
+    templateUrl: 'templates/registration/signUp1.html',
     controller: 'signUp1Ctrl',
 	controllerAs: 'signupbasic'	
   })
 
   .state('registration.signUp2', {
     url: '/signup2',
-    templateUrl: 'templates/signUp2.html',
+    templateUrl: 'templates/registration/signUp2.html',
     controller: 'signUp2Ctrl',
 	controllerAs: 'signupdetail'	
   })
 
   .state('registration.userConfirmation', {
     url: '/userconfirmation',
-    templateUrl: 'templates/userConfirmation.html',
+    templateUrl: 'templates/registration/userConfirmation.html',
     controller: 'userConfirmationCtrl',
 	controllerAs: 'userconfirm'	
   })
-
+	
+/*
+  There are five tabs in the home screen, and for each tab
+  there is a corresponding controller. There is also a parent abstract
+  controller "homeCtrl" from which all the other five states
+  inherits.
+  */
   .state('home', {
 	abstract: true,
     url: '/home',
-    templateUrl: 'templates/home.html',
+    templateUrl: 'templates/home/tabs.html',
     controller: 'homeCtrl',
 	controllerAs: 'home'	
   })
@@ -55,7 +66,7 @@ angular.module('app.routes', [])
       url: '/activity',
       views: {
         'activity-tab': {
-          templateUrl: 'templates/activity.html',
+          templateUrl: 'templates/home/activity.html',
           controller: 'activityTabCtrl'
         }
       }
@@ -65,7 +76,7 @@ angular.module('app.routes', [])
       url: '/listings',
       views: {
         'listings-tab': {
-          templateUrl: 'templates/listings.html',
+          templateUrl: 'templates/home/listings.html',
           controller: 'listingsTabCtrl',
 		  controllerAs: 'list'	
         }
@@ -76,7 +87,7 @@ angular.module('app.routes', [])
       url: '/add',
       views: {
         'add-tab': {
-          templateUrl: 'templates/add.html',
+          templateUrl: 'templates/home/add.html',
           controller: 'addTabCtrl'
         }
       }
@@ -86,7 +97,7 @@ angular.module('app.routes', [])
       url: '/settings',
       views: {
         'settings-tab': {
-          templateUrl: 'templates/settings.html',
+          templateUrl: 'templates/home/settings.html',
           controller: 'settingsTabCtrl'
         }
       }
@@ -96,7 +107,7 @@ angular.module('app.routes', [])
       url: '/feedback',
       views: {
         'feedback-tab': {
-          templateUrl: 'templates/feedback.html',
+          templateUrl: 'templates/home/feedback.html',
           controller: 'feedbackTabCtrl'
         }
       }
