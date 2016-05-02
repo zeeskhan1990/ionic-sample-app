@@ -66,7 +66,8 @@ angular.module('app.routes', [])
       views: {
         'listings-tab': {
           templateUrl: 'templates/listings.html',
-          controller: 'listingsTabCtrl'
+          controller: 'listingsTabCtrl',
+		  controllerAs: 'list'	
         }
       }
     })

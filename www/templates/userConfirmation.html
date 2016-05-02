@@ -9,17 +9,20 @@
         </div>
 		</div>
         <div class="list card">
-            <div class="item item-divider">To be replaced</div>
+            <div class="item item-divider">{{userconfirm.formDetails.firstname}} {{userconfirm.formDetails.lastname}}</div>
             <div class="item item-body">
-			<div>ABC</div>
-			<div>ABC</div>
-			<div>ABC</div>
+			<!--<div ng-repeat="(key,value) in userconfirm.formDetails" ng-if="value">{{value}}</div>-->
+			<div><i class="icon ion-ios-telephone"></i> {{userconfirm.formDetails.mobileno}}</div>
+			<div><i class="icon ion-ios-email-outline"></i> {{userconfirm.formDetails.emailaddress}}</div>
+			<div ng-if="userconfirm.formDetails.agency"><i class="icon ion-ios-briefcase"></i> {{userconfirm.formDetails.agency}}</div>
+			<div ng-if="userconfirm.formDetails.state"><i class="icon ion-ios-location"></i> {{userconfirm.formDetails.state}}</div>
 			</div>
         </div>
 		<div class="row user-confirmation-save">
         <div class="col col-10"></div>
         <div class="col">
-            <a href="#/home/listings" id="userConfirmation-button7" class="button button-assertive  button-block">Save and create my FREE listing</a>
+			<button class="button button-assertive button-block" ng-click="userconfirm.submit()">Save and create my FREE listing</button>
+            <!--<a href="#/home/listings" class="button button-assertive  button-block"></a>-->
         </div>
         <div class="col col-10"></div>
 		</div>

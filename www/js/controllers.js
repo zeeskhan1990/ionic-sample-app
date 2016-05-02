@@ -39,11 +39,19 @@ angular.module('app.controllers', [])
 			$state.go('registration.userConfirmation');
 		}
 	}
+	vm.checkIfSelected = function(val) {
+		return vm.formDetails.state ===  val;
+	}
 	vm.formDetails = $scope.rc.formDetails;
 })
    
 .controller('userConfirmationCtrl', function($scope, $state) {
-	this.formDetails = $scope.rc.formDetails;
+	var vm = this;
+	vm.formDetails = $scope.rc.formDetails;
+	vm.submit = function() {
+		window.localStorage.setItem("userInfo", JSON.stringify(vm.formDetails));
+		$state.go('home.listings');
+	}
 })
    
 .controller('activityTabCtrl', function($scope) {
@@ -51,7 +59,8 @@ angular.module('app.controllers', [])
 })
 
 .controller('listingsTabCtrl', function($scope) {
-
+	var vm = this;
+	vm.userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
 })
 
 .controller('addTabCtrl', function($scope) {
